@@ -2,7 +2,6 @@
 ## Project 1
 ### Code Similarity and Plagiarism Detection 
 
-![Boxplot](https://github.com/user-attachments/assets/4b71987c-93bd-414d-94d5-fa3dea2d7151)
 It was my college Generative Artifical Intelligence project .
 
 This repository provides tools for preprocessing, embedding, and comparing code snippets using advanced NLP techniques and machine learning models. It leverages pretrained models like CodeBERT to compute code embeddings and evaluate similarity.
