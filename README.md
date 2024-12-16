@@ -9,4 +9,4 @@ In this portfolio, you’ll find examples of my work, including interactive dash
 I am continuously exploring new ways to use data to solve problems and tell stories. Feel free to explore my portfolio to see how I can turn data into value!
 
 ## Table of Content
-1. [About]([https://www.google.com](https://github.com/Hirakhan01/DataAnalyst/edit/main/README.md))
+1. <span style="color:blue">[About](https://github.com/Hirakhan01/DataAnalyst/edit/main/README.md)</span>
