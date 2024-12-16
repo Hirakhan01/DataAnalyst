@@ -10,4 +10,7 @@ I am continuously exploring new ways to use data to solve problems and tell stor
 
 ## Table of Content
 1. <span style="color:blue">[About](https://github.com/Hirakhan01/DataAnalyst/edit/main/README.md)</span>
-2. <span style="color:blue">[Projects](https://github.com/Hirakhan01/DataAnalyst/edit/main/README.md)</span>
+2. <span style="color:blue">[Projects](https://github.com/Hirakhan01/DataAnalyst/tree/main)</span>
+3. <span style="color:blue">[Certificates](https://github.com/Hirakhan01/DataAnalyst/edit/main/README.md)</span>
+4. <span style="color:blue">[Education](https://github.com/Hirakhan01/DataAnalyst/edit/main/README.md)</span>
+5. <span style="color:blue">[Contact](https://github.com/Hirakhan01/DataAnalyst/edit/main/README.md)</span>
