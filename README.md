@@ -58,6 +58,13 @@ I am continuously exploring new ways to use data to solve problems and tell stor
 * Optimized inventory planning: Provided insights that reduced excess inventory by 20%, saving approximately ₹5,00,000 annually.
 
 ## Certificates
-*	<span style="color:blue">[Google Advanced Data Analytics Professional by Coursera](https://www.coursera.org/accomplishments)</span>                     Dec2024 
-*	<span style="color:blue">[Microsoft Certified: Data Analyst Associate with PowerBI by Udemy](https://www.udemy.com/home/my-courses/learning/)</span>           Nov 2024 
-*	<span style="color:blue">[Generative AI by Google](https://www.cloudskillsboost.google/profile/paths)</span>                                                     Aug 2024 
+*	<span style="color:blue">[Google Advanced Data Analytics Professional by Coursera](https://www.coursera.org/accomplishments)</span>                     
+*	<span style="color:blue">[Microsoft Certified: Data Analyst Associate with PowerBI by Udemy](https://www.udemy.com/home/my-courses/learning/)</span>           
+*	<span style="color:blue">[Generative AI by Google](https://www.cloudskillsboost.google/profile/paths)</span>                                                     
+* <span style="color:blue">[Accenture North America - Data Analytics and Visualization Job Simulation](https://www.theforage.com/dashboard)</span>
+* <span style="color:blue">[BCG - Data Science Job Simulation](https://www.theforage.com/dashboard)</span>
+* <span style="color:blue">[KPMG AU - Data Analytics Job Simulation](https://www.theforage.com/dashboard)</span>
+* <span style="color:blue">[Real Life Machine Learning and Data Science Projects](https://www.udemy.com/home/my-courses/learning/)</span>
+
+## Contact 
+<span style="color:blue">[LinkedIn](www.linkedin.com/in/hira-khan-ba2178206)</span>
