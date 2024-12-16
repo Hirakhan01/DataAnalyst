@@ -8,4 +8,5 @@ I have a strong foundation in data preparation, data wrangling, statistical anal
 In this portfolio, you’ll find examples of my work, including interactive dashboards for Zomato, e-commerce, and supermarkets, along with data projects developed using Python, MySQL, and Power BI. These showcase my technical skills in building end-to-end workflows, from extracting raw data to creating compelling dashboards and presentations.
 I am continuously exploring new ways to use data to solve problems and tell stories. Feel free to explore my portfolio to see how I can turn data into value!
 
-##Table of Content
+## Table of Content
+======
