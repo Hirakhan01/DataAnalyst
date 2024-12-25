@@ -58,6 +58,7 @@ I am continuously exploring new ways to use data to solve problems and tell stor
 * Optimized inventory planning: Provided insights that reduced excess inventory by 20%, saving approximately ₹5,00,000 annually.
 
 ## Certificates
+* <span style="color:blue">[PwC Switzerland - Power BI Job Simulation](https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/4sLyCPgmsy8DA6Dh3/a87GpgE6tiku7q3gu_4sLyCPgmsy8DA6Dh3_mQeRudLNjHRpc5ksF_1734354915302_completion_certificate.pdf)
 *	<span style="color:blue">[Google Advanced Data Analytics Professional by Coursera](https://www.coursera.org/accomplishments)</span>                     
 *	<span style="color:blue">[Microsoft Certified: Data Analyst Associate with PowerBI by Udemy](https://www.udemy.com/home/my-courses/learning/)</span>           
 *	<span style="color:blue">[Generative AI by Google](https://www.cloudskillsboost.google/profile/paths)</span>                                                     
