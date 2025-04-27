@@ -1,0 +1,174 @@
+Code:
+import streamlit as st
+import math
+
+# --- User Login/Selection ---
+st.title("Multi-User Scientific Calculator")
+
+if "user" not in st.session_state:
+    st.session_state.user = ""
+if "user_histories" not in st.session_state:
+    st.session_state.user_histories = {}
+
+user = st.text_input("Enter your username:", value=st.session_state.user)
+if user:
+    st.session_state.user = user
+    if user not in st.session_state.user_histories:
+        st.session_state.user_histories[user] = []
+
+    # --- Calculator State ---
+    if "input" not in st.session_state:
+        st.session_state.input = ""
+    if "result" not in st.session_state:
+        st.session_state.result = ""
+    if "show_advanced" not in st.session_state:
+        st.session_state.show_advanced = False
+
+    def append_history(expr, result):
+        st.session_state.user_histories[user].append(f"{expr} = {result}")
+
+    # --- Calculator UI ---
+    st.markdown("### Calculator")
+    st.text_input("Input", value=st.session_state.input, key="input_box", disabled=True)
+    st.text_input("Result", value=st.session_state.result, key="result_box", disabled=True)
+
+    # --- Button Layouts ---
+    standard_buttons = [
+        ["7", "8", "9", "+"],
+        ["4", "5", "6", "-"],
+        ["1", "2", "3", "*"],
+        ["0", ".", "=", "÷"],
+        ["←", "CE", "C", "±"],
+    ]
+    advanced_buttons = [
+        ["√", "^", "sin", "cos"],
+        ["tan", "log", "exp", "ln"],
+        ["Back"]
+    ]
+
+    # --- Button Handlers ---
+    def handle_button(btn):
+        if btn == "=":
+            try:
+                result = str(eval(st.session_state.input))
+                append_history(st.session_state.input, result)
+                st.session_state.result = result
+                st.session_state.input = result
+            except Exception:
+                st.session_state.result = "Error"
+        elif btn == "CE" or btn == "C":
+            st.session_state.input = ""
+            st.session_state.result = ""
+        elif btn == "←":
+            st.session_state.input = st.session_state.input[:-1]
+        elif btn == "±":
+            if st.session_state.input.startswith("-"):
+                st.session_state.input = st.session_state.input[1:]
+            else:
+                st.session_state.input = "-" + st.session_state.input
+        elif btn == "Adv":
+            st.session_state.show_advanced = True
+        elif btn == "Back":
+            st.session_state.show_advanced = False
+        elif btn == "√":
+            try:
+                value = float(st.session_state.input)
+                result = str(math.sqrt(value))
+                append_history(f"√({st.session_state.input})", result)
+                st.session_state.result = result
+                st.session_state.input = result
+            except Exception:
+                st.session_state.result = "Error"
+        elif btn == "^":
+            st.session_state.input += "**"
+        elif btn == "sin":
+            try:
+                value = float(st.session_state.input)
+                result = str(math.sin(math.radians(value)))
+                append_history(f"sin({st.session_state.input})", result)
+                st.session_state.result = result
+                st.session_state.input = result
+            except Exception:
+                st.session_state.result = "Error"
+        elif btn == "cos":
+            try:
+                value = float(st.session_state.input)
+                result = str(math.cos(math.radians(value)))
+                append_history(f"cos({st.session_state.input})", result)
+                st.session_state.result = result
+                st.session_state.input = result
+            except Exception:
+                st.session_state.result = "Error"
+        elif btn == "tan":
+            try:
+                value = float(st.session_state.input)
+                result = str(math.tan(math.radians(value)))
+                append_history(f"tan({st.session_state.input})", result)
+                st.session_state.result = result
+                st.session_state.input = result
+            except Exception:
+                st.session_state.result = "Error"
+        elif btn == "log":
+            try:
+                value = float(st.session_state.input)
+                result = str(math.log10(value))
+                append_history(f"log({st.session_state.input})", result)
+                st.session_state.result = result
+                st.session_state.input = result
+            except Exception:
+                st.session_state.result = "Error"
+        elif btn == "exp":
+            try:
+                value = float(st.session_state.input)
+                result = str(math.exp(value))
+                append_history(f"exp({st.session_state.input})", result)
+                st.session_state.result = result
+                st.session_state.input = result
+            except Exception:
+                st.session_state.result = "Error"
+        elif btn == "ln":
+            try:
+                value = float(st.session_state.input)
+                result = str(math.log(value))
+                append_history(f"ln({st.session_state.input})", result)
+                st.session_state.result = result
+                st.session_state.input = result
+            except Exception:
+                st.session_state.result = "Error"
+        elif btn == "×":
+            st.session_state.input += "*"
+        elif btn == "÷":
+            st.session_state.input += "/"
+        else:
+            if st.session_state.result == "Error":
+                st.session_state.input = ""
+                st.session_state.result = ""
+            st.session_state.input += btn
+
+    # --- Render Buttons ---
+    if not st.session_state.show_advanced:
+        for row in standard_buttons:
+            cols = st.columns(4)
+            for i, btn in enumerate(row):
+                if btn == "=":
+                    cols[i].button(btn, on_click=handle_button, args=(btn,), key=f"std_{btn}_{i}")
+                else:
+                    cols[i].button(btn, on_click=handle_button, args=(btn,), key=f"std_{btn}_{i}")
+        st.button("Adv", on_click=handle_button, args=("Adv",), key="adv_btn")
+    else:
+        for row in advanced_buttons:
+            cols = st.columns(4)
+            for i, btn in enumerate(row):
+                if btn != "":
+                    cols[i].button(btn, on_click=handle_button, args=(btn,), key=f"adv_{btn}_{i}")
+
+    # --- History Section ---
+    st.markdown("### History")
+    history = st.session_state.user_histories[user]
+    for i, item in enumerate(reversed(history[-10:])):
+        st.write(item)
+    if st.button("Clear History"):
+        st.session_state.user_histories[user] = []
+
+else:
+    st.info("Please enter your username to use the calculator.")
